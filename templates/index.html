@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+        max-width: 600px;
+        margin: 5% auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #4a4a4a;
+    }
+
+    form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .icon-container {
+        position: relative;
+    }
+
+    .icon-container .icon {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #aaa;
+    }
+
+    .icon-container input, .icon-container select {
+        padding-left: 40px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 0;
+        background-color: #2575fc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #185bc9;
+    }
+</style>
+<title>College Predictor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JEE MAINS College Predictor</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group icon-container">
+                <i class="fas fa-sort-numeric-up icon"></i>
+                <input type="number" name="rank" class="form-control" placeholder="Rank" required>
+            </div>
+            <div class="form-group icon-container">
+                <i class="fas fa-layer-group icon"></i>
+                <select name="caste" class="form-control">
+                    <option value="">Any</option>
+                    <option value="EWS">EWS</option>
+                    <option value="OBC-NCL">OBC-NCL</option>
+                    <option value="OPEN">OPEN</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>>
+                </select>
+            </div>
+            <div class="form-group icon-container">
+                <i class="fas fa-map-marker-alt icon"></i>
+                <select name="state" class="form-control">
+                    <option value="">Any State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="form-group icon-container">
+                <i class="fas fa-graduation-cap icon"></i>
+                <select name="branch" class="form-control">
+                    <option value="">Any Branch</option>
+                    <option value="Computer Science and Engineering (4 Years, Bachelor of Technology)">Computer Science and Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Electronics and Communication Engineering (4 Years, Bachelor of Technology)">Electronics and Communication Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Civil Engineering (4 Years, Bachelor of Technology)">Civil Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Mechanical Engineering (4 Years, Bachelor of Technology)">Mechanical Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Electrical Engineering (4 Years, Bachelor of Technology)">Electrical Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Chemical Engineering (4 Years, Bachelor of Technology)">Chemical Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Electrical and Electronics Engineering (4 Years, Bachelor of Technology)">Electrical and Electronics Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Metallurgical and Materials Engineering (4 Years, Bachelor of Technology)">Metallurgical and Materials Engineering (4 Years, Bachelor of Technology)</option>
+                    <option value="Architecture (5 Years, Bachelor of Architecture)">Architecture (5 Years, Bachelor of Architecture)</option>
+                    <option value="Bio Technology (4 Years, Bachelor of Technology)">Bio Technology (4 Years, Bachelor of Technology)</option>
+                    <option value="Information Technology (4 Years, Bachelor of Technology)">Information Technology (4 Years, Bachelor of Technology)</option>
+                    <option value="Mining Engineering (4 Years, Bachelor of Technology)">Mining Engineering (4 Years, Bachelor of Technology)</option>
+</select>
+</div>
+<div class="form-group icon-container">
+<i class="fas fa-venus-mars icon"></i>
+<select name="gender" class="form-control" required>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+</div>
+<input type="submit" value="Predict">
+</form>
+</div>
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
