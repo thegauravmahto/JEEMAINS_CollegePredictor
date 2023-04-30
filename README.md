@@ -1,7 +1,6 @@
 # JEE MAINS College Predictor
 
-
-This Flask app calculates a range of ranks based on IPE marks and EAMCET marks. Users input their IPE marks and EAMCET marks, and the app returns a range of ranks as output.
+This is a web app that predicts the possible colleges that a student may get based on their JEE MAINS score and other basic details. It is designed to provide students with an idea of the colleges they may be eligible for and help them make an informed decision about their college admissions.
 
 ## Getting Started
 These instructions will help you set up the project on your local machine for development and testing purposes.
@@ -21,13 +20,12 @@ pip install flask
 ```
 Next, clone this repository using the following command:
 ```bash
-git clone https://github.com/thegauravmahto/EAPCET_Rank_Predictor
-```
+https://github.com/thegauravmahto/JEEMAINS_CollegePredictor```
 
 ## Usage
- On the homepage, enter your IPE marks and EAMCET marks in the respective input fields.
- Click "Submit" to get the calculated range of ranks.
- The results page will display the final marks and the rank.
+To use the JEE MAINS College Predictor web app, you will need to enter your JEE MAINS score, your state of eligibility, your category (general, OBC, SC/ST, etc.), and your preferred branch of study. Once you have entered these details, the web app will generate a list of possible colleges that you may be eligible for based on your score and other criteria.
+
+
 ```bash
 python app.py
 ```
