@@ -20,7 +20,8 @@ pip install flask
 ```
 Next, clone this repository using the following command:
 ```bash
-https://github.com/thegauravmahto/JEEMAINS_CollegePredictor```
+https://github.com/thegauravmahto/JEEMAINS_CollegePredictor
+```
 
 ## Usage
 To use the JEE MAINS College Predictor web app, you will need to enter your JEE MAINS score, your state of eligibility, your category (general, OBC, SC/ST, etc.), and your preferred branch of study. Once you have entered these details, the web app will generate a list of possible colleges that you may be eligible for based on your score and other criteria.
